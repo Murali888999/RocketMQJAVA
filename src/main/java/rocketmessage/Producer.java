@@ -8,9 +8,8 @@ public class Producer
 {
 	public static void main(String[] args) throws Exception {
       
-        DefaultMQProducer producer = new
-            DefaultMQProducer("Producer1");
-        producer.setNamesrvAddr("192.168.1.27:9876");        
+        DefaultMQProducer producer = new DefaultMQProducer("Producer1");
+      producer.setNamesrvAddr("192.168.1.27:9876");        
         producer.start();
         producer.setRetryTimesWhenSendAsyncFailed(0);
         for (int i = 0; i < 100; i++) {           
